@@ -1,0 +1,14 @@
+{
+  "name": "patient-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A web-based patient management system backed by MySQL",
+  "main": "patient_details.js",
+  "scripts": {
+    "start": "node patient_details.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}

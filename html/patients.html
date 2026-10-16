@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f6">
+    <title>Hemanth Patient Management System | Patients</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="patients">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" aria-label="Hemanth Patient Management System home"><span class="brand-mark" aria-hidden="true">+</span><span><strong>Hemanth</strong><small>Patient Management System</small></span></a>
+            <p class="nav-label">WORKSPACE</p>
+            <nav class="side-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html"><span class="nav-icon">◫</span>Overview</a>
+                <a class="nav-link active" href="patients.html"><span class="nav-icon">♡</span>Patients</a>
+                <a class="nav-link" href="add-patient.html"><span class="nav-icon">＋</span>Add patient</a>
+            </nav>
+            <div class="sidebar-note"><span class="note-icon" aria-hidden="true">✳</span><strong>Care, made clearer.</strong><p>A calm space to keep patient information close at hand.</p></div>
+            <div class="sidebar-foot"><span class="online-dot"></span>Workspace ready</div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong>Patients</strong></div><a class="avatar-link" href="index.html" aria-label="Go to overview">CF</a></header>
+            <div class="page-content">
+                <section class="section-heading page-title-row">
+                    <div><p class="eyebrow">YOUR RECORDS</p><h1>Patients</h1><p class="intro-copy">A complete, considered view of everyone in your care.</p></div>
+                    <a class="button button-primary" href="add-patient.html"><span aria-hidden="true">＋</span> Add a patient</a>
+                </section>
+                <section class="panel records-panel">
+                    <div class="records-toolbar">
+                        <div><h2>Patient directory</h2><p id="patientCountLabel">Loading records…</p></div>
+                        <label class="search-box"><span aria-hidden="true">⌕</span><input id="patientSearch" type="search" placeholder="Search patients…" aria-label="Search patients"></label>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Patient</th><th>Phone</th><th>Email</th><th>Care note</th><th>Room</th><th>Actions</th></tr></thead>
+                            <tbody id="patientTable"><tr><td colspan="6" class="empty-state">Loading patient records…</td></tr></tbody>
+                        </table>
+                    </div>
+                    <p class="status" id="patientsStatus" role="status" aria-live="polite"></p>
+                </section>
+                <footer class="page-footer">Hemanth Patient Management System <span>·</span> Patient information, handled with care.</footer>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

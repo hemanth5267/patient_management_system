@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f6">
+    <title>Hemanth Patient Management System | Update a patient</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="update">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="index.html" aria-label="Hemanth Patient Management System home"><span class="brand-mark" aria-hidden="true">+</span><span><strong>Hemanth</strong><small>Patient Management System</small></span></a>
+            <p class="nav-label">WORKSPACE</p>
+            <nav class="side-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html"><span class="nav-icon">◫</span>Overview</a>
+                <a class="nav-link active" href="patients.html"><span class="nav-icon">♡</span>Patients</a>
+                <a class="nav-link" href="add-patient.html"><span class="nav-icon">＋</span>Add patient</a>
+            </nav>
+            <div class="sidebar-note"><span class="note-icon" aria-hidden="true">✳</span><strong>Care, made clearer.</strong><p>A calm space to keep patient information close at hand.</p></div>
+            <div class="sidebar-foot"><span class="online-dot"></span>Workspace ready</div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <a href="patients.html">Patients</a> <span>/</span> <strong>Update patient</strong></div><a class="avatar-link" href="index.html" aria-label="Go to overview">CF</a></header>
+            <div class="page-content">
+                <section class="section-heading page-title-row">
+                    <div><p class="eyebrow">UPDATE RECORD</p><h1 id="formTitle">Update patient</h1><p class="intro-copy">Review and update the details for this patient.</p></div>
+                    <img class="form-page-photo" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&amp;fit=crop&amp;w=720&amp;q=85" alt="Doctor reviewing patient information">
+                </section>
+                <section class="panel form-panel">
+                    <div class="form-intro"><span class="stat-icon lilac">♡</span><div><h2>Patient information</h2><p>Fields marked with <span class="required-mark">*</span> are required.</p></div></div>
+                    <form id="patientForm" class="patient-form">
+                        <div class="field"><label for="patient_id">Patient ID <span class="required-mark">*</span></label><input id="patient_id" name="patient_id" type="number" min="1" required placeholder="e.g. 1001"><small>The patient ID cannot be changed.</small></div>
+                        <div class="field"><label for="patient_name">Full name <span class="required-mark">*</span></label><input id="patient_name" name="patient_name" type="text" maxlength="150" required placeholder="Patient's full name"></div>
+                        <div class="field"><label for="phone_number">Phone number</label><input id="phone_number" name="phone_number" type="tel" maxlength="30" placeholder="+1 (555) 000-0000"></div>
+                        <div class="field"><label for="email_id">Email address</label><input id="email_id" name="email_id" type="email" maxlength="254" placeholder="name@example.com"></div>
+                        <div class="field field-wide"><label for="address">Address</label><textarea id="address" name="address" rows="2" maxlength="500" placeholder="Street, city, postal code"></textarea></div>
+                        <div class="field"><label for="problem">Care note</label><textarea id="problem" name="problem" rows="3" maxlength="1000" placeholder="Briefly describe the patient's care needs"></textarea></div>
+                        <div class="field"><label for="room_no">Room number</label><input id="room_no" name="room_no" type="text" maxlength="30" placeholder="e.g. 204"></div>
+                        <div class="form-actions field-wide"><a class="button button-quiet" href="patients.html">Cancel</a><button class="button button-primary" id="savePatient" type="submit">Save changes</button></div>
+                    </form>
+                    <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+                </section>
+                <footer class="page-footer">Hemanth Patient Management System <span>·</span> Patient information, handled with care.</footer>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
